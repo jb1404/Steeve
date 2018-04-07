@@ -21,6 +21,11 @@
 
 .opportunity-link {
   display: block;
+  font-weight: 500;
+  border-width: 2px !important;
+  padding: 8px 20px !important;
+  font-size: 1rem;
+
 }
 
 .ListOpportunities {
@@ -41,7 +46,8 @@
   color: white !important;
 }
 
-div.ListOpportunities > div > form {
+//Search & Icon
+div.ListOpportunities  div  form {
   display: flex;
   justify-content:center;
   align-items:center;
@@ -49,10 +55,6 @@ div.ListOpportunities > div > form {
 }
 
 
-
-div.ListNotes > a:nth-child(2) {
-  margin-top:3.9em;
-}
 
 div > div > div.ListNotes {
   margin-left: 1em;
@@ -100,3 +102,68 @@ div.EditSubNote > div > div{
   flex-grow: 0;
   margin-top: 10%
 }
+
+.btn {
+  text-transform: none
+}
+
+.top-of-buttons {
+  height: 100px;
+}
+
+.top-of-buttons > * {
+  margin-top: 0;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  font-weight: 400 !important;
+  font-size: 1.1rem !important;
+  text-transform: none !important;
+}
+.imageTodo {
+  height: 100%;
+  width:  100%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.imageLogin {
+  height: 30%;
+  width:  40%;
+  // padding : 15px;
+  margin-right:10px
+  // -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  //   filter: grayscale(100%);
+}
+.text{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    color:white;
+}
+
+.textTitle{
+  // position: absolute;
+    text-align: center;
+    width:100%;
+    height: auto;
+    font-size: 40px !important;
+    line-height: 2em !important;
+    color:rgb(36, 31, 31);
+  background-color: #fff;
+}
+
+
+.textHome{
+  // position: absolute;
+    text-align: center;
+    width:100%;
+    height: auto;
+    font-size: 20px !important;
+    line-height: 2em !important;
+    color:rgb(36, 31, 31);
+  background-color: #fff;
+}
+

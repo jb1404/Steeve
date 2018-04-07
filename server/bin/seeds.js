@@ -174,7 +174,7 @@ User.remove({}, function(err) {
                 },
                 {
                   SFDCID: "fki84g87",
-                  oppName : "Société Générale - Opening Asian MArket",
+                  oppName : "Ironhack - RFP Tire Bouchons ",
                   oppAmount:1200000,
                   oppClosingDate : new Date("2018-04-07"),
                   oppLastModificationDate : new Date("2018-03-02"),

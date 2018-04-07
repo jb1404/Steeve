@@ -31,7 +31,7 @@ let temp = [];
 conn.query("select Amount, Id, Account.ID,Opportunity.name from Opportunity")
 .then((result) => {
   let temp = result.records.map(x => {return {name:x.Name}});
-  console.log(temp)
+  // console.log(temp)
   // for (i=0; i<temp.length; i++) {
   //   data2.push(temp[i])
   // }
@@ -39,6 +39,21 @@ conn.query("select Amount, Id, Account.ID,Opportunity.name from Opportunity")
 }) 
 
 
+conn.sobject("Opportunity").retrieve("0060N00000VXUluQAH", function(err, opportunity) {
+  if (err) { return console.error(err); }
+  // console.log("Name : " + opportunity.Name);
+  console.log("opportunity : ", opportunity.Description);
+  // ...
+});
+
+conn.sobject("Opportunity").update({ 
+  Id : '0060N00000VXUluQAH',
+  Description : 'Coucou Node'
+}, function(err, ret) {
+  if (err || !ret.success) { return console.error(err, ret); }
+  console.log('Updated Successfully : ' + ret.id);
+  // ...
+});
 
 // function(err, result) {
 //   console.log("CALLBACK result", result)

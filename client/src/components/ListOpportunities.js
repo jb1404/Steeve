@@ -24,22 +24,24 @@ class ListOpportunities extends Component {
    render() {                
     return (
       <div className="ListOpportunities">
-        <h4 className='myOpps'>My Opportunities</h4>
-        <Search search={this.props.search} handleSearch={this.props.handleSearch.bind(this)}/>
-          <ul> 
-           <div> 
-              {this.props.getSearchedOpps().map((opp) => {
-                  return (<NavLink className='btn opportunity-link btn-outline-primary'   key={opp._id} onClick={(e)=>{this.props.onClick(e)}} to={`/my-business/${opp._id}/notes`}>{opp.oppName}</NavLink>)
-                })}
-            </div>
-            {/* {this.props.opps.map((opp) => {
-              return (
+        <div className="top-of-buttons">
+          <h4 className='myOpps'>My Opportunities</h4>
+          <Search search={this.props.search} handleSearch={this.props.handleSearch.bind(this)}/>
+        </div>
+        <ul> 
+          <div> 
+            {this.props.getSearchedOpps().map((opp) => {
+                return (<NavLink className='btn opportunity-link btn-outline-primary'   key={opp._id} onClick={(e)=>{this.props.onClick(e)}} to={`/my-business/${opp._id}/notes`}>{opp.oppName}</NavLink>)
+              })}
+          </div>
+          {/* {this.props.opps.map((opp) => {
+            return (
 
-                <div><Link className='btn btn-primary' key={opp._id} onClick={()=>{this.props.onClick.bind(this)}}to={`/my-business/${opp._id}/notes`}>{opp.oppName}</Link></div>
-              )
-            })} */}
-            
-          </ul>
+              <div><Link className='btn btn-primary' key={opp._id} onClick={()=>{this.props.onClick.bind(this)}}to={`/my-business/${opp._id}/notes`}>{opp.oppName}</Link></div>
+            )
+          })} */}
+          
+        </ul>
 
         {/* {console.log(this.props.search)} */}
       </div>

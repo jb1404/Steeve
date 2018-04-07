@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+
+
+
 let noteModel = 
 {
   name : ' ', 
@@ -38,14 +41,21 @@ const service = axios.create({
 });
 
 const errHandler = err => {
-  console.error(err.response.data);
-  throw err.response.data;
+  console.error(err);
+  throw err;
 };
 
 
 
 export default {
   service: service,
+  updateSfdc(data) {
+    return service
+
+    .put('salesforce/opportunity',data)
+    .then(res => res.data)
+    .catch(errHandler);
+  },
   isLoggedIn() {
     return localStorage.getItem('user') != null
   },

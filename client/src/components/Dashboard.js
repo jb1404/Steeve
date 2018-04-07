@@ -220,6 +220,7 @@ createLabelPerso(e, opportunityId, noteId) {
             newOpps[iOpp].notes[iNote].name = e.target.value;
             this.setState({
               opps: newOpps,
+              noteTitle : e.target.value,
               didItChanged: true
             })
             return;
@@ -350,6 +351,13 @@ createLabelPerso(e, opportunityId, noteId) {
 
   }
 
+  handleSfdc(title) {
+    console.log("DEBUG this.state.noteTitle", this.state.noteTitle);
+    
+    api.updateSfdc({description: this.state.noteTitle})
+    .then(this.props.history.push('/my-business'))
+  }
+
   render() {                
     return (
       <div className="App">
@@ -368,6 +376,7 @@ createLabelPerso(e, opportunityId, noteId) {
                 onChange={this.handleChange.bind(this)}
                 changeLabelPerso = {this.changeLabelPerso.bind(this) } 
                 handleSave={this.handleSave.bind(this)}
+                handleSfdc = {this. handleSfdc.bind(this)}
                 handleSubmit={this.handleSubmit.bind(this)} />
             } />
       

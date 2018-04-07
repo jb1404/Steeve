@@ -11,6 +11,7 @@ const config = require("./config");
 var User = require('./models/user');
 var authRoutes = require('./routes/auth');
 
+var salesforceRoutes = require('./routes/salesforce');
 var usersRoutes = require('./routes/users');
 var usersNotes = require('./routes/notes');
 var usersOpportunities = require('./routes/opportunities');
@@ -65,6 +66,7 @@ app.use('/api', authRoutes);
 app.use('/api/users', usersRoutes);
 app.use('/api/notes', usersNotes);
 app.use('/api/opportunities', usersOpportunities);
+app.use('/api/salesforce', salesforceRoutes);
 
 
 // For any routes that starts with "/api", catch 404 and forward to error handler

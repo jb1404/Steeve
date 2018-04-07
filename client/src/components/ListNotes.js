@@ -24,8 +24,11 @@ class ListNotes extends Component {
     }                
     return (
       <div className="ListNotes"> 
-        <button className="btn btn-rose btn-round"
-        onClick={() => this.props.handleNewNote(this.props.match.params.opportunityId)}><i class="material-icons">add</i> Add Note</button>
+        <div className="top-of-buttons">
+          <button className="btn btn-rose btn-round" onClick={() => this.props.handleNewNote(this.props.match.params.opportunityId)}>
+            <i class="material-icons">add</i> Add Note
+          </button>
+        </div>
           {this.selectedOpp && this.selectedOpp.notes.map((note)=> {
             return (
               <NavLink className='btn opportunity-link btn-outline-primary'  key={note._id} to={`/my-business/${this.opportunityId}/notes/${note._id}`} onClick={()=> {console.log('clicked')}}>{note.name}</NavLink>

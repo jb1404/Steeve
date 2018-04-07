@@ -102,6 +102,7 @@ class EditSubNote extends Component {
       )
     })}
     <input type="submit" id='save'value="Save" className="btn btn-rose btn-round" onClick={this.props.handleSubmit}/>
+    <input type="submit" id='save'value="Update Salesforce" className="btn btn-success btn-round" onClick={()=> {this.props.handleSfdc()}}/>
     
     <br/>
   </div>

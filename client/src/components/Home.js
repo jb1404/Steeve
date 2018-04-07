@@ -4,6 +4,7 @@ import api from '../api';
 import Login from './Login';
 import Signup from './Signup';
 import ReactDOM from 'react-dom';
+// import homePic from '../img/homePic2.png';
 
 
 class Home extends Component {
@@ -17,7 +18,15 @@ class Home extends Component {
   render() {                
     return (
      <div>
-       <p>This is Home</p>
+       <div className="Home"> 
+       <div className='home-Up'></div>
+       <div className='home-down'></div>
+       <div className='textTitle'> Welcome to Steeve</div>
+       <div className='textHome'>Start taking Business Note and save time</div>
+        {/* <img src={homePic} className= 'imageHome' alt='Welcome'/> */}
+        
+
+      </div>
         </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../api';
+import pc from '../img/pc.jpg';
 
 class Login extends Component {
   constructor(props) {
@@ -38,7 +39,7 @@ class Login extends Component {
           Password: <input type="password" value={this.state.password} onChange={(e) => {this.handleInputChange("password", e)}}  /> <br/>
           <button onClick={(e) => this.handleClick(e)}>Login</button>
         </form> */}
-
+        <img src={pc} className= 'imageLogin' alt='Welcome'/>
         <div className="card card-signup">
 
           <form className="form" method="" action="">
